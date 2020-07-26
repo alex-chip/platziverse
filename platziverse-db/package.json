@@ -1,0 +1,23 @@
+{
+  "name": "platziverse-db",
+  "version": "1.0.0",
+  "description": "A Simple IoT Platform - DB Module",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "lint:fix": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-chip/platziverse.git"
+  },
+  "author": "Alex Chip <alexchip32@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alex-chip/platziverse/issues"
+  },
+  "homepage": "https://github.com/alex-chip/platziverse#readme",
+  "devDependencies": {
+    "standard": "^14.3.4"
+  }
+}
