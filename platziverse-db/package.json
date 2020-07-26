@@ -19,5 +19,10 @@
   "homepage": "https://github.com/alex-chip/platziverse#readme",
   "devDependencies": {
     "standard": "^14.3.4"
+  },
+  "dependencies": {
+    "pg": "^8.3.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.3"
   }
 }
