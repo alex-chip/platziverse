@@ -4,14 +4,18 @@ const setupAgentModel = require('./models/agent')
 const setupMetricModel = require('./models/metric')
 
 module.exports = async function (config) {
-  const sequileze = setupDataBase(config)
+  const sequelize = setupDataBase(config)
   const AgentModel = setupAgentModel(config)
   const MetricModel = setupMetricModel(config)
 
   AgentModel.hasMany(MetricModel)
-  MetricModel.belogsTo(AgentModel)
+  MetricModel.belongsTo(AgentModel)
 
-  await sequileze.authenticate()
+  await sequelize.authenticate()
+
+  if (config.setup) {
+    await sequelize.sync({ force: true })
+  }
 
   const Agent = {}
   const Metric = {}
