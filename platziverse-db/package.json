@@ -7,7 +7,9 @@
     "lint": "standard",
     "lint:fix": "standard --fix",
     "setup": "DEBUG=platziverse:* node setup.js",
-    "test": "DEBUG=platziverse:* ava --verbose"
+    "test": "DEBUG=platziverse:* ava --verbose",
+    "test:coverage": "DEBUG=platziverse:* nyc ava --verbose",
+    "test:coverage:html": "DEBUG=platziverse:* nyc --reporter=lcov ava --verbose"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,7 @@
   "homepage": "https://github.com/alex-chip/platziverse#readme",
   "devDependencies": {
     "ava": "^3.10.1",
+    "nyc": "^15.1.0",
     "sqlite3": "^5.0.0",
     "standard": "^14.3.4"
   },
